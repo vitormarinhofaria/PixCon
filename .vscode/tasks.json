@@ -7,6 +7,11 @@
             "label": "build example/basic",
             "type": "shell",
             "command": "pushd ${workspaceFolder}/examples/basic && make && popd"
+        },
+        {
+            "label": "build example/image",
+            "type": "shell",
+            "command": "pushd ${workspaceFolder}/examples/image && make && popd"
         }
     ]
 }

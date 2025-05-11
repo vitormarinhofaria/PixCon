@@ -64,7 +64,7 @@ WindowData InitWindow(int w, int h)
         return windowData;
     }
 
-    windowData.height = winsize.ws_row - 5;
+    windowData.height = winsize.ws_row - 2;
     windowData.width = winsize.ws_col - 2;
     windowData.charColors = (CharColor *)malloc(sizeof(CharColor) * winsize.ws_col * winsize.ws_row);
     memset(windowData.charColors, 0, sizeof(CharColor) * winsize.ws_col * winsize.ws_row);
@@ -117,6 +117,7 @@ void DrawImage(WindowData *windowData, Image *image, int offX, int offY)
     }
 }
 
+// TODO: investigate a way to use double buffering
 void Present(WindowData *windowData)
 {
 #ifdef _WIN32
